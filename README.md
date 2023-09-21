@@ -38,7 +38,7 @@
   
   * To install all dependent packages, use the following command `npm install`.
 
-  * Then, run the back-end `Node.js` sample using the following command `node embed.js`.
+  * Then, run the back-end `Nodejs` sample using the following command `node embed.js`.
 
   * Open the command line interface and navigate to the specified file [location](https://github.com/boldbi/vue-with-nodejs-sample/tree/master/vue) where the project is located.
    
@@ -53,13 +53,13 @@
 
   ### Run a Sample Using Visual Studio Code
  
-  * Open the `Node.js` sample in **Visual Studio Code**.
+  * Open the `Nodejs` sample in **Visual Studio Code**.
 
   * To install all dependent packages, use the following command `npm install`.
 
   * Then, run the back-end `Node.js` sample using the following command `node embed.js`.
 
-  * Open the `Vue` sample in a new window of **Visual Studio Code**.
+  * Open the `vue` sample in a new window of **Visual Studio Code**.
    
   * To install all dependent packages, use the following command `npm install`.
 
