@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in Vue.js with Node.js
 
- This Bold BI Vue.js with Node.js sample contains the Dashboard embedding samples. In this sample Vue application act as front-end and Node.js act as back-end application. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
+ This Bold BI Vue.js with Node.js sample contains the Dashboard embedding samples. In this sample Vue.js application act as front-end and Node.js act as back-end application. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
  ## Dashboard view
 
