@@ -17,44 +17,44 @@ const port = 8080;
 
 let appconfig;
 try {
-    appconfig = JSON.parse(fs.readFileSync('embedConfig.json'));
+appconfig = JSON.parse(fs.readFileSync('embedConfig.json'));
 } catch (error) {
-    console.error('Error: embedConfig.json file not found.');
-    process.exit(1);
+console.error('Error: embedConfig.json file not found.');
+process.exit(1);
 }
 
 var embedSecret = appconfig.EmbedSecret;
 var userEmail = appconfig.UserEmail;
 
-app.post('/authorizationserver', async function (req, response) {
-    var embedQuerString = req.body.embedQuerString;
-    var dashboardServerApiUrl = req.body.dashboardServerApiUrl;
+app.post('/authorizationserver',  async function (req, response){
+var embedQuerString = req.body.embedQuerString;
+var dashboardServerApiUrl = req.body.dashboardServerApiUrl;
 
-    embedQuerString += "&embed_user_email=" + userEmail;
-    embedQuerString += "&embed_server_timestamp=" + Math.round((new Date()).getTime() / 1000);
-    var embedSignature = "&embed_signature=" + GetSignatureUrl(embedQuerString);
-    var embedDetailsUrl = "/embed/authorize?" + embedQuerString + embedSignature;
+embedQuerString += "&embed_user_email=" + userEmail;
+embedQuerString += "&embed_server_timestamp=" + Math.round((new Date()).getTime() / 1000);
+var embedSignature = "&embed_signature=" + GetSignatureUrl(embedQuerString);
+var embedDetailsUrl = "/embed/authorize?" + embedQuerString+embedSignature;
 
-    var serverProtocol = url.parse(dashboardServerApiUrl).protocol == 'https:' ? https : http;
-    serverProtocol.get(dashboardServerApiUrl + embedDetailsUrl, function (res) {
-        var str = '';
-        res.on('data', function (chunk) {
-            str += chunk;
-        });
-        res.on('end', function () {
-            response.send(str);
-        });
+var serverProtocol = url.parse(dashboardServerApiUrl).protocol == 'https:' ? https : http;
+serverProtocol.get(dashboardServerApiUrl+embedDetailsUrl, function(res){
+    var str = '';
+    res.on('data', function (chunk) {
+    str += chunk;
     });
+    res.on('end', function () {
+    response.send(str);
+    });
+});
 })
 
-    function GetSignatureUrl(queryString)
-    {
-    var keyBytes = Buffer.from(embedSecret);
-    var hmac = crypto.createHmac('sha256', keyBytes);
-    data = hmac.update(queryString);
-    gen_hmac = data.digest().toString('base64');
+function GetSignatureUrl(queryString)
+{
+var keyBytes = Buffer.from(embedSecret);
+var hmac = crypto.createHmac('sha256', keyBytes);
+data = hmac.update(queryString);
+gen_hmac= data.digest().toString('base64');
 
-    return gen_hmac;
+return gen_hmac;
 }
 app.get('/getdetails', (req, res) => {
     const serverEmbedConfigData = path.join(__dirname, 'embedConfig.json');
@@ -68,5 +68,5 @@ app.get('/getdetails', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+console.log(`Server is running on port ${port}`);
 }); 
