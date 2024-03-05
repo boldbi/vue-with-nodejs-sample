@@ -31,7 +31,7 @@ This sample demonstrates how to deploy the Bold BI Vue.js with node.js applicati
 
  * Open the "server.yml" file and provide the "service" name to be deployed in AWS Lambda and the "region" as highlighted below.
 
- ![Serverless.yml](image-1.png)
+ ![Serverless.yml](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/ca992c5e-47be-4d57-aeee-1bd0c90880db)
 
  * Now, open the terminal and execute the command "npm install -g serverless" to install the Serverless framework.
 
@@ -41,25 +41,30 @@ This sample demonstrates how to deploy the Bold BI Vue.js with node.js applicati
  
  * Proceed by running the command "npm init -y" to initialize and manage the npm processes.
 
- ![Terminal image](image-2.png)
+ ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/ec753cb6-6c52-4413-afa9-4a0b70920ba8)
+
 
  * Now, execute the command "npm install --save express serverless-http" to install the necessary serverless packages.
 
- ![Terminal image](image-3.png)
+ ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/44adbd8a-81c2-4b3c-99bc-e3c76d48a637)
+
 
  * Run the command "serverless deploy" to deploy the application. You can now browse the endpoints.
 
- ![Terminal image](image-4.png)
+ ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/860e9222-1e59-4290-8b14-733a66baee12)
+
 
 ## Steps to run the Vue.js application
 
  * Copy the backend application URL (for example: "https://l9kuk9k0k.execute-api.eu-east-1.amazonaws.com/dev") and paste it as the value for "ApiHost" in the App.vue file.
 
- ![App.Vue](image-5.png)
+ ![App.Vue](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/bafb519e-1526-4c22-9ab5-2b70ff989ceb)
+
 
  * Now, execute the command "npm install" to install the npm packages. After installation, run the command "npm run serve" to start the application.
 
- ![Dashboard](image-6.png)
+ ![Dashboard](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/f78d7def-81c9-482d-ba4b-c28c72686c7a)
+
 
 ## Enabling CORS in AWS lambda
 
