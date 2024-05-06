@@ -6,7 +6,7 @@ This sample demonstrates how to deploy the Bold BI Vue.js with node.js applicati
 
  * [Visual Studio Code](https://code.visualstudio.com/download)
  * [Node.js](https://nodejs.org/en/)
- * [AWS Lambda](https://aws.amazon.com/lambda/)
+ * An account in [AWS Lambda](https://aws.amazon.com/lambda/)
 
  #### Supported browsers
   
