@@ -37,7 +37,7 @@ async mounted() {
         let ApiHost = 'http://localhost:8080';
 
         try {
-            const response = await fetch(ApiHost+'/getdetails');
+            const response = await fetch(ApiHost + '/getdetails');
             const data = await response.json();
             renderDashboard(data);
         }catch (error) {
@@ -50,18 +50,15 @@ async mounted() {
             serverUrl: data.ServerUrl + '/' + data.SiteIdentifier,
             dashboardId: data.DashboardId,
             embedContainerId: 'dashboard',
-            embedType: BoldBI.EmbedType.Component,
-            environment: data.Environment,
             width: '100%',
             height: window.innerHeight + 'px',
-            expirationTime: 100000,
             authorizationServer: {
-            url: ApiHost + "/authorizationserver",
-            },
+              url: ApiHost + "/authorizationserver"
+            }
         });
         dashboard.loadDashboard();
         }
-    },
+    }
 };
 </script>
 <style>
