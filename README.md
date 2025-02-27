@@ -4,7 +4,7 @@
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/vue-with-nodejs-sample/assets/129486688/1ca68cc4-e4ce-4403-a0f0-44a4879e4081)
+![Dashboard View](images/dashboard-view.png)
 
 ## Requirements/Prerequisites
 
@@ -21,16 +21,16 @@
 
 * Please ensure you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks) to enable it.
 
-    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+    ![Embed Settings](images/embed-settings.png)
 
 * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks) for reference. Additionally, you can refer to the following image for visual guidance.
 
-     ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
-     ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+     ![Embed Settings Download](images/embed-settings-download.png)
+     ![EmbedConfig Properties](images/embedconfig-properties.png)
 
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/vue-with-nodejs-sample/tree/master/Nodejs) within the application. Please ensure you have placed it in the application, as shown in the following image.
 
-    ![EmbedConfig image](https://github.com/boldbi/vue-with-nodejs-sample/assets/129486688/0f396ab7-24d7-4fb3-b54e-312c430512c9)
+    ![EmbedConfig image](images/embedconfig.png)
 
 ## Run a Sample Using Command Line Interface
 
@@ -64,7 +64,7 @@
 
   * Finally, run the application using the following command `npm run serve`. After the application has started, it will display a URL in the command line interface, typically something like (e.g., <http://localhost:8081>). Copy this URL and paste it into your default web browser.
 
-![dashboard image](https://github.com/boldbi/vue-with-nodejs-sample/assets/129486688/1ca68cc4-e4ce-4403-a0f0-44a4879e4081)
+![dashboard image](images/dashboard-view.png)
 
 > **NOTE:** If the API host is already in use, modify the port number per your preference in embed.js and update that App.vue file.
 
