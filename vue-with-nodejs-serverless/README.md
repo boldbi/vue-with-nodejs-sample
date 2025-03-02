@@ -16,22 +16,22 @@ This sample demonstrates how to deploy the Bold BI Vue.js with node.js applicati
 
 * Please ensure you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks) to enable it.
 
-    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+    ![Embed Settings](/images/embed-settings.png)
 
 * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks) for reference. Additionally, you can refer to the following image for visual guidance.
 
-     ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
-     ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+     ![Embed Settings Download](/images/embed-settings-download.png)
+     ![EmbedConfig Properties](/images/embedconfig-properties.png)
 
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/vue-with-nodejs-sample/tree/master/Nodejs) within the application. Please ensure you have placed it in the application, as shown in the following image.
 
-    ![EmbedConfig image](https://github.com/boldbi/vue-with-nodejs-sample/assets/129486688/0f396ab7-24d7-4fb3-b54e-312c430512c9)
+    ![EmbedConfig image](/images/embedconfig.png)
 
 ## Steps to deploy the nodejs application in AWS Lambda environment
 
 * Open the "server.yml" file and provide the "service" name to be deployed in AWS Lambda and the "region" as highlighted below.
 
- ![Serverless.yml](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/ca992c5e-47be-4d57-aeee-1bd0c90880db)
+ ![Serverless.yml](/images/serverlesss.png)
 
 * Now, open the terminal and execute the command "npm install -g serverless" to install the Serverless framework.
 
@@ -41,25 +41,25 @@ This sample demonstrates how to deploy the Bold BI Vue.js with node.js applicati
 
 * Proceed by running the command "npm init -y" to initialize and manage the npm processes.
 
- ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/ec753cb6-6c52-4413-afa9-4a0b70920ba8)
+ ![Terminal image](/images/serverless-init.png)
 
 * Now, execute the command "npm install --save express serverless-http" to install the necessary serverless packages.
 
- ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/44adbd8a-81c2-4b3c-99bc-e3c76d48a637)
+ ![Terminal image](/images/serverless-save.png)
 
 * Run the command "serverless deploy" to deploy the application. You can now browse the endpoints.
 
- ![Terminal image](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/860e9222-1e59-4290-8b14-733a66baee12)
+ ![Terminal image](/images/serverless-deploy.png)
 
 ## Steps to run the Vue.js application
 
 * Copy the backend application URL (for example: "<https://l9kuk9k0k.execute-api.eu-east-1.amazonaws.com/dev>") and paste it as the value for "ApiHost" in the App.vue file.
 
- ![App.Vue](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/bafb519e-1526-4c22-9ab5-2b70ff989ceb)
+ ![App.Vue](/images/serverless-app.png)
 
 * Now, execute the command "npm install" to install the npm packages. After installation, run the command "npm run serve" to start the application.
 
- ![Dashboard](https://github.com/boldbi/vue-with-nodejs-sample/assets/149655326/f78d7def-81c9-482d-ba4b-c28c72686c7a)
+ ![Dashboard](/images/serverless-dashboard.png)
 
 ## Enabling CORS in AWS lambda
 
