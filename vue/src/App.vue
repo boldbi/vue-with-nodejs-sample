@@ -45,18 +45,33 @@ async mounted() {
             this.showErrorModal = true;
         }
 
+        function getEmbedToken() {
+          return fetch(ApiHost + "/tokengeneration", {  // Backend application URL
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+          })
+            .then(response => {
+              if (!response.ok) throw new Error("Token fetch failed");
+              return response.text();
+            });
+        }
+    
         function renderDashboard(data) {
-        let dashboard = BoldBI.create({
-            serverUrl: data.ServerUrl + '/' + data.SiteIdentifier,
-            dashboardId: data.DashboardId,
-            embedContainerId: 'dashboard',
-            width: '100%',
-            height: window.innerHeight + 'px',
-            authorizationServer: {
-              url: ApiHost + "/authorizationserver"
-            }
-        });
-        dashboard.loadDashboard();
+          getEmbedToken()
+            .then(accessToken => {
+              const dashboard = BoldBI.create({
+                serverUrl: data.ServerUrl + "/" + data.SiteIdentifier,
+                dashboardId: data.DashboardId,
+                embedContainerId: "dashboard",
+                embedToken: accessToken
+              });
+
+              dashboard.loadDashboard();
+            })
+            .catch(err => {
+              console.error("Error rendering dashboard:", err);
+            });
         }
     }
 };
