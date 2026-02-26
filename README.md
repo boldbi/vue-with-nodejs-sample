@@ -15,7 +15,7 @@
 
 ### Supported browsers
   
-* Google Chrome, Microsoft Edge, Mozilla Firefox.
+* Google Chrome, Microsoft Edge, and Mozilla Firefox.
 
 ## Configuration
 
@@ -48,7 +48,7 @@
 
 ## Developer IDE
 
-* [Visual studio code](https://code.visualstudio.com/download)
+* [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Run a Sample Using Visual Studio Code
 
@@ -64,7 +64,7 @@
 
   * Finally, run the application using the following command `npm run serve`. After the application has started, it will display a URL in the command line interface, typically something like (e.g., <http://localhost:8081>). Copy this URL and paste it into your default web browser.
 
-![dashboard image](images/dashboard-view.png)
+  ![dashboard image](images/dashboard-view.png)
 
 > **NOTE:** If the API host is already in use, modify the port number per your preference in embed.js and update that App.vue file.
 
